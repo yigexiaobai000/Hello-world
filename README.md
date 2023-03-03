@@ -1,7 +1,7 @@
 # Hello-world
 ## Very Good
 This is a test
-测试：
+
 3月2日 工作内容：
                         1.完成Git Bash的安装及基本命令学习
                         2.完成Git Hub账号的创建
