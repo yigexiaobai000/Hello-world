@@ -1,1 +1,147 @@
+public class LianXi001 {
+    public static void main(String[] args) {
+      //用四个变量描述商品1
+       String m1Name = "茉莉花茶包 20 包";
+       String m1Id = "000099518";
+       int m1Count = 1000;
+       double m1Price = 99.9;
+       //再用四个变量描述商品2
+       String m2Name = "可口可乐 330ml";
+       String m2Id = "000099519";
+       int m2Count = 1000;
+       double m2Price = 3.0;
+         //卖出一个商品1
+       int m1ToSold = 1;
+        System.out.println("感谢购买"+m1ToSold+"个"+m1Name+"。商品单价为"+m1Price+"。消费总价为"+m1Price*m1ToSold+"。");
+        m1Count-=m1ToSold;
+        System.out.println(m1Id+"剩余的库存数量为"+m1Count);
+          // TODO 卖出三个商品2
+        int m2ToSold = 3;
+        System.out.println("感谢购买"+m2ToSold+"个"+m2Name+"。商品单价为"+m2Price+"。消费总价为"+m2Price*m2ToSold+"。");
+        m2Count -= m2ToSold;
+        System.out.println(m2Id+"剩余的库存数量为"+m2Count);
+
+    }
+}
+
+
+public class LianXi001 {
+    public static void main(String[] args) {
+        Merchandise m1;
+        m1 = new Merchandise();
+        Merchandise m2 = new Merchandise();
+        Merchandise m3 = new Merchandise();
+        Merchandise m4 = new Merchandise();
+        Merchandise m5 = new Merchandise();
+        m1 = m5;
+        System.out.println("m1=" + m1);
+        System.out.println("m2=" + m2);
+        System.out.println("m3=" + m3);
+        System.out.println("m4=" + m4);
+        System.out.println("m5=" + m5);
+
+        Merchandise m6 = m1;
+        System.out.println("m6=" + m6);
+        m6 = m5;
+        System.out.println("m6=" + m6);
+
+        System.out.println("m1=" + m1);
+        System.out.println("m2=" + m2);
+        System.out.println("m3=" + m3);
+        System.out.println("m4=" + m4);
+        System.out.println("m5=" + m5);
+
+        int a = 999;
+
+    }
+}
+
+
+public class LianXi001 {
+    public static void main(String[] args) {
+       Merchandise [] merchandises = new Merchandise[9];
+       merchandises [0] =new Merchandise();
+       merchandises [1] = new Merchandise();
+       merchandises [0].name ="联想笔记本 拯救者Y9000P2022";
+        System.out.println(merchandises[0].name);
+        System.out.println(merchandises[2]);
+
+    }
+}
+
+
+
+
+
+
+public class CPU {
+    double speed;
+    String producer;
+}
+
+public class Mainboard {
+    CPU cpu;
+    Memory memory;
+    //主板
+    Storage storage;
+    String model;
+    //上市年份
+    int year;
+}
+
+public class Memory {
+    long capacity;
+    String producer;
+}
+
+public class Phone {
+     Screen screen;
+     Mainboard mainboard;
+     double price;
+     boolean hasFigurePrintUnlocker;
+}
+
+public class Screen {
+    double size;
+    String producer;
+}
+
+public class Storage {
+    long capacity;
+    String producer;
+}
+
+
+public class PhoneMaker {
+    public static void main(String[] args) {
+        //创建一个Phone的实例
+        Phone phone =new Phone();
+        //可以设置断点查看实例内部状态
+        phone.hasFigurePrintUnlocker = true;
+        phone.price=2999.9;
+        //创建一个Screen的实例，给phone实例的screen引用赋值
+        phone .screen = new Screen();
+        //通过引用phone找到Phone的对象，通过screen找到Screen 通过.producer给之赋值
+        phone.screen.producer = "京东方";
+        phone.screen.size = 6.6;
+
+         Mainboard mainboard = new Mainboard();
+
+         mainboard.model = "EA888";
+         mainboard.year = 2019;
+         mainboard.cpu = new CPU();
+         mainboard.cpu.producer = "德州仪器";
+         mainboard.cpu.speed = 3.5;
+         mainboard.memory = new Memory();
+         mainboard.memory.producer = "三星";
+         mainboard.memory.capacity = 4;
+         mainboard.storage = new Storage();
+         mainboard.storage.producer = "Intel";
+         mainboard.storage.capacity = 256;
+          //想想我们创建了几个对象，有创建了几个引用？
+
+
+    }
+}
+
 
