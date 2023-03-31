@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main2 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("第一个数");
+        String a = in.nextLine();
+        System.out.println("输入:+，-，*，/");
+        String b = in.nextLine();
+        System.out.println("第二个数");
+        String c = in.nextLine();
+
+
+        double a1 = Double.parseDouble(String.valueOf(a));
+        double c1 = Double.parseDouble(String.valueOf(c));
+
+        char b1 = b.charAt(0);
+        byte b2 = (byte) b1;
+
+        if (c1 == 0){
+            System.out.println("除数不能为:0");
+        }else if (b2 == 43) {
+            double q = a1 + c1;
+            System.out.println(a1 + "+" + c1 + "=" + q);
+        } else if (b2 == 45) {
+            double w = a1 - c1;
+            System.out.println(a1 + "-" + c1 + "=" + w);
+        } else if (b2 == 42) {
+            double e = a1 * c1;
+            System.out.println(a1 + "*" + c1 + "=" + e);
+        } else if (b2 == 47) {
+            double r = a1 / c1;
+            System.out.println(a1+ "/" + c1+ "=" + r);
+        }
+    }
+}
