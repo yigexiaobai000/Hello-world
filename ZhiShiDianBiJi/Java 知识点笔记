@@ -1,1 +1,39 @@
+1.  连接标准输入
+Scanner in =new Scanner(System.in);//连接标准输入
+      System.out.println("输入你的数字");//提示操作
+      String a = in.nextLine();//读取命令行的一个正整数
+      System.out.println("你输入的数字是："+ a);//返回输入的数字
 
+      String转int      int a1 = Integer.parseInt(a);
+      String转Boolean  Boolean b1 =Boolean.valueOf(b);
+      String转char 
+                              1.  String.charAt(index)       (返回值为char)
+                     String string = "abc";
+                     char c = string.charAt(0);
+                     结果为 a
+                              2. string.toCharArray()     (返回值为char[])
+                     String string = "abc";
+                     char [] stringArr = string.toCharArray();
+                     结果为 abc
+     String转double    double a1 = Double.parseDouble(String.valueOf(a));
+         将字符转为ASCII
+            int ascii = (int) character;
+         将ASCII转为字符
+                     char character = (char)ascii;
+字符转换为ascii码：
+方法1：
+char   c   =  'a '；  
+   byte   b  = (byte)c；
+方法2：
+直接将这个字符转化为int型就可以得到ascii码值
+char   c   =   'a '；  
+   int  b   =  c； //字符的ascii码值
+
+
+  *     char b1 = b.charAt(0);
+        byte b2 = (byte) b1;
+    把输入 +,-,*,/。转为其对应的十进制数:43,45,42,47。
+
+
+ 定义一个字符串val  s:String = "924"
+再定义一个变量val  z = Integer.valueOf(s,10)
